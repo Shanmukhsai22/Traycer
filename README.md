@@ -9,7 +9,7 @@ A CLI tool that analyzes your codebase and generates detailed task plans using G
 - 🎯 Identifies affected components
 - ⏱️ Time estimation
 - 🚨 Risk assessment
-- 📄 Outputs both human-readable (TXT) and machine-readable (JSON) plans
+- 📄 Outputs both Txt and json files
 
 ## Prerequisites
 
@@ -20,8 +20,7 @@ A CLI tool that analyzes your codebase and generates detailed task plans using G
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/traycer.git
-cd traycer
+git clone https://github.com/Shanmukhsai22/Traycer.git
 ```
 
 2. Create and activate virtual environment:
@@ -48,12 +47,12 @@ GEMINI_API_KEY=your_api_key_here
 Run from the root directory:
 
 ```bash
-python traycer.py --task "Your task description"
+python -m src.main "your code base path" --task "Your task description"
 ```
 
 Example:
 ```bash
-python traycer.py --task "Implement user authentication with JWT"
+python -m src.main "C:\Users\user\Desktop\Project" --task "updating the pagination and ui for resume upload"
 ```
 
 ## Options
@@ -65,8 +64,8 @@ python traycer.py --task "Implement user authentication with JWT"
 
 The tool generates two files:
 
-- `plan.txt`: Human-readable markdown format
-- `plan.json`: Machine-readable JSON format
+- `plan.txt`
+- `plan.json` 
 
 Output includes:
 - Task requirements
@@ -75,10 +74,3 @@ Output includes:
 - Time estimates
 - Potential risks
 
-## Supported Languages
-
-- Python
-- JavaScript/TypeScript
-- Java
-- C++
-- Go
